@@ -1,9 +1,9 @@
-import styled from "styled-components"
-import LocationItem from "./LocationItem"
+import styled from 'styled-components';
+import LocationItem from './LocationItem';
 
 const StyledLocationList = styled.div`
-    min-height: 100dvh;
-`
+  min-height: 100dvh;
+`;
 export default function LocationList() {
   return (
     <StyledLocationList>
@@ -11,5 +11,5 @@ export default function LocationList() {
       <LocationItem />
       <LocationItem />
     </StyledLocationList>
-  )
+  );
 }
