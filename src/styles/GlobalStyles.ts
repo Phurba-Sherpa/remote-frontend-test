@@ -9,9 +9,18 @@ const GlobalStyles = createGlobalStyle`
    
     /* Grey */
 
-    --color-gery-0: #fff;
+    --color-grey-0: #fff;
     --color-grey-50: #FBFBFB;
-    --color-grey-700: #4D4C4C
+    --color-grey-200: #F4F4F4;
+    --color-grey-400: #C7C7C7;
+    --color-grey-700: #4D4C4C;
+
+    /* width */
+    --border-width-xs: .5px;
+    --border-width-sm: 1px;
+
+    /* border */
+    --border-radius-md: 5px;
 }
   
 ////////////////////
