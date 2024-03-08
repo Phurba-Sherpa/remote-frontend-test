@@ -1,3 +1,10 @@
+import GlobalStyles from './styles/GlobalStyles';
+
 export function App() {
-  return <>Hello from Angelswing!</>;
+  return (
+    <>
+      <GlobalStyles />
+      <p>hello</p>
+    </>
+  );
 }
