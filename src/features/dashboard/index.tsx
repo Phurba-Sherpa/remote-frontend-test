@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import LocationMap from './LocationMap';
 import LocationList from './components/LocationList';
 import { Icoordinate, useLocation } from './useLocation';
-import { ReactNode } from 'react';
 
 ///////////////////
 /* STYLES */
@@ -21,16 +20,14 @@ const StyledDashboard = styled.div`
 const Dashboard = () => {
   const { data, status } = useLocation();
 
-
   if (status === 'error') {
-    alert('No response from server')
+    alert('No response from server');
   }
 
-  console.log('I am here')
   return (
     <StyledDashboard>
       <LocationList locations={data?.locations as Icoordinate[]} />
-      <LocationMap />
+      <LocationMap coordinates={data?.locations as Icoordinate[]} />
     </StyledDashboard>
   );
 };
