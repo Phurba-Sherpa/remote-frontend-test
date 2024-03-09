@@ -43,7 +43,7 @@ const StyledNavLink = styled(NavLink)`
   & img {
     width: 2.2rem;
     height: 2.2rem;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
   &:hover svg,
@@ -51,7 +51,7 @@ const StyledNavLink = styled(NavLink)`
   &.active:link svg,
   &.active:visited svg {
     color: var(--color-grey-0);
-    }
+  }
 `;
 
 export default function VerticalNav() {
@@ -60,17 +60,17 @@ export default function VerticalNav() {
       <NavList>
         <li>
           <StyledNavLink to="/dashboard">
-            <img src={frameIconSrc} alt='vertical bars' />
-           </StyledNavLink>
+            <img src={frameIconSrc} alt="vertical bars" />
+          </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/measurement">
-          <img src={rulerIconSrc} alt='vertical bars' />
+            <img src={rulerIconSrc} alt="vertical bars" />
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/cad-overlay">
-          <img src={overlayIconSrc} alt='vertical bars' />
+            <img src={overlayIconSrc} alt="vertical bars" />
           </StyledNavLink>
         </li>
       </NavList>

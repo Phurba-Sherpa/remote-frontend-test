@@ -7,9 +7,9 @@ import GlobalStyles from '@/styles/GlobalStyles';
 import AppLayout from '@/components/layouts/AppLayout';
 
 // ** Pages
-import Dashboard from '@/pages/dashboard';
-import Measurement from '@/pages/mesurement';
-import CadOverlay from '@/pages/cad-overlay';
+import Dashboard from '@/pages/Dashboard';
+import Measurement from '@/pages/Measurement';
+import CadOverlay from '@/pages/CadOverLay';
 import PageNotFound from '@/pages/PageNotFound';
 
 // ** We can change based on the requirements
@@ -30,6 +30,7 @@ export function App() {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
+          {/* Will add app layout to all children */}
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="/dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />

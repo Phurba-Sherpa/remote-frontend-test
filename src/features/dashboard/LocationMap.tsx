@@ -7,9 +7,8 @@ import { Vector, OSM } from 'ol/source';
 import { Vector as VL, Tile } from 'ol/layer';
 import { Circle, Stroke, Style } from 'ol/style';
 
-
 // ** React
-import { FC, useEffect, useMemo } from 'react';
+import { type FC, useEffect } from 'react';
 import styled from 'styled-components';
 
 // **
@@ -38,11 +37,9 @@ const { __DEFAULT_LAT__, __DEFAULT_LONG__, __DEFAULT_ZOOM__ } = CONFIG;
 
 // ** Comp
 const LocationMap: FC<ILocationMapProps> = ({ coordinates }) => {
-
-
   useEffect(() => {
     const vectorSource = new Vector();
-    const zoomLevel = !!coordinates ? 4 : __DEFAULT_ZOOM__
+    const zoomLevel = !!coordinates ? 4 : __DEFAULT_ZOOM__;
 
     const map = new Map({
       target: 'map-container',
@@ -60,8 +57,7 @@ const LocationMap: FC<ILocationMapProps> = ({ coordinates }) => {
                 width: 2, // Set the stroke width
               }),
             }),
-          })
-
+          }),
         }),
       ],
       view: new View({
@@ -80,8 +76,6 @@ const LocationMap: FC<ILocationMapProps> = ({ coordinates }) => {
         map.getView().fit(extent, { padding: [10, 30, 10, 40] });
       });
     }
-
-    console.count('In effect')
 
     return () => {
       map.dispose();
