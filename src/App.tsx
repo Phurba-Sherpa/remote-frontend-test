@@ -36,8 +36,8 @@ export function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="measurement" element={<Measurement />} />
             <Route path="cad-overlay" element={<CadOverlay />} />
-            <Route path="*" element={<PageNotFound />} />
           </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

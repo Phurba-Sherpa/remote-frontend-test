@@ -1,11 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-// ** icon import
-import frameIconSrc from '@/assets/nav-icon/vertical-bar.svg';
-import rulerIconSrc from '@/assets/nav-icon/ruler.svg';
-import overlayIconSrc from '@/assets/nav-icon/layers.svg';
-
 const StyledVerticalNav = styled.aside`
   background-color: var(--color-grey-0);
   min-height: 100vh;
@@ -27,7 +22,6 @@ const StyledNavLink = styled(NavLink)`
   &:visited {
     display: flex;
     align-items: center;
-    padding: 0.5rem;
     transition: all 0.3s;
     padding: 1rem;
     border-radius: var(--border-radius-md);
@@ -38,19 +32,29 @@ const StyledNavLink = styled(NavLink)`
   &.active:link,
   &.active:visited {
     background-color: var(--color-brand-500);
+    & div {
+      background-color: var(--color-grey-0);
+    }
+  }
+  & div {
+    background-color: var(--color-grey-400);
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
-  & img {
-    width: 2.2rem;
-    height: 2.2rem;
-    transition: all 0.3s;
+  & #frame {
+    -webkit-mask: url(src/assets/nav-icon/vertical-bar.svg) no-repeat center;
+    mask: url(src/assets/nav-icon/vertical-bar.svg) no-repeat center;
   }
 
-  &:hover svg,
-  &:active svg,
-  &.active:link svg,
-  &.active:visited svg {
-    color: var(--color-grey-0);
+  & #ruler {
+    -webkit-mask: url(src/assets/nav-icon/ruler.svg) no-repeat center;
+    mask: url(src/assets/nav-icon/ruler.svg) no-repeat center;
+  }
+
+  & #layers {
+    -webkit-mask: url(src/assets/nav-icon/layers.svg) no-repeat center;
+    mask: url(src/assets/nav-icon/layers.svg) no-repeat center;
   }
 `;
 
@@ -60,17 +64,20 @@ export default function VerticalNav() {
       <NavList>
         <li>
           <StyledNavLink to="/dashboard">
-            <img src={frameIconSrc} alt="vertical bars" />
+            <div id="frame"></div>
+            {/* <img src={frameIconSrc} alt="vertical bars" /> */}
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/measurement">
-            <img src={rulerIconSrc} alt="vertical bars" />
+            <div id="ruler"></div>
+            {/* <img src={rulerIconSrc} alt="vertical bars" /> */}
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/cad-overlay">
-            <img src={overlayIconSrc} alt="vertical bars" />
+            <div id="layers"></div>
+            {/* <img src={overlayIconSrc} alt="vertical bars" /> */}
           </StyledNavLink>
         </li>
       </NavList>
