@@ -17,7 +17,7 @@ import {CONFIG} from '@/angelswing.frontend.config'
 /* STYLES */
 /////////////////////
 const StyledLocationMap = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   
   @media (max-width: 640px) {
