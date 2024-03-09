@@ -1,4 +1,3 @@
-import { type ReactNode } from "react"
 
 // ** Comp
 import VerticalNav from "./VerticalNav"

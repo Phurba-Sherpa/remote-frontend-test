@@ -1,5 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import frame from '@/assets/nav-icon/vertical-bar.svg'
+import ruler from '@/assets/nav-icon/ruler.svg'
+import overlays from '@/assets/nav-icon/layers.svg'
 
 const StyledVerticalNav = styled.aside`
   background-color: var(--color-grey-0);
@@ -42,21 +45,12 @@ const StyledNavLink = styled(NavLink)`
     height: 2.4rem;
   }
 
-  & #frame {
-    -webkit-mask: url(src/assets/nav-icon/vertical-bar.svg) no-repeat center;
-    mask: url(src/assets/nav-icon/vertical-bar.svg) no-repeat center;
-  }
-
-  & #ruler {
-    -webkit-mask: url(src/assets/nav-icon/ruler.svg) no-repeat center;
-    mask: url(src/assets/nav-icon/ruler.svg) no-repeat center;
-  }
-
-  & #layers {
-    -webkit-mask: url(src/assets/nav-icon/layers.svg) no-repeat center;
-    mask: url(src/assets/nav-icon/layers.svg) no-repeat center;
-  }
 `;
+
+const StyledIcon = styled.div<{url: string}>`
+   -webkit-mask: url(${props => props.url}) no-repeat center;
+    mask: url(${(props) => props.url}) no-repeat center;
+`
 
 export default function VerticalNav() {
   return (
@@ -64,20 +58,17 @@ export default function VerticalNav() {
       <NavList>
         <li>
           <StyledNavLink to="/dashboard">
-            <div id="frame"></div>
-            {/* <img src={frameIconSrc} alt="vertical bars" /> */}
+            <StyledIcon url={frame} />
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/measurement">
-            <div id="ruler"></div>
-            {/* <img src={rulerIconSrc} alt="vertical bars" /> */}
+            <StyledIcon url={ruler} />
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/cad-overlay">
-            <div id="layers"></div>
-            {/* <img src={overlayIconSrc} alt="vertical bars" /> */}
+            <StyledIcon url={overlays} />
           </StyledNavLink>
         </li>
       </NavList>

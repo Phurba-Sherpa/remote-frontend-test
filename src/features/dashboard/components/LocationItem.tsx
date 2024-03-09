@@ -10,7 +10,7 @@ const StyledLocationItem = styled.div`
   border-bottom: var(--border-width-sm) solid var(--color-grey-200);
   background-color: var(--color-grey-0);
   > p {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
     > span {
       margin-left: 0.25em;
     }
@@ -57,14 +57,15 @@ export default LocationItem;
 const StyledLabel = styled.td`
   font-weight: 700;
   padding-right: 0.5em;
+  font-size: 1.3rem;
 `;
 
 const StyledValue = styled.td`
   color: var(--color-brand-500);
   font-family: 'Roboto', sans-serif;
-  text-align: right;
+  text-align: left;
   font-weight: 500;
-  padding: 0.5em 0.825em;
+  padding: 0.4em 1em .4em .5em;
   font-size: 1.8rem;
   border: var(--border-width-xs) solid var(--color-grey-400);
   border-radius: var(--border-radius-md);
