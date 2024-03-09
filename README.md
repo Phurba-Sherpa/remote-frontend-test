@@ -42,5 +42,10 @@ npm install
 npm run dev
 ```
 
-### Issues
-If you happen to get blank map after the api fetch, then try adjusting zoom, I didn't get why map goes blank if you try to zoom in or zoom out. So, to see the map **ZOOM OUT THE MAP TO THE MINIMU VALUE**
+### Issues :pushpin:
+
+If you happen to get blank map after the api fetch, then try adjusting zoom, I didn't get why map goes blank if you try to zoom in or zoom out. So, to see the map, please do one of the following steps
+- Try using zoom in or zoom out button of the Overlay map.
+- Try refreshing the page
+- Inspect browser ```CTR + SHIFT + I ```. And may be try resizing the window using responsive dimensions.
+
