@@ -41,8 +41,8 @@ const StyledNavLink = styled(NavLink)`
   }
 
   & img {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     transition: all .3s;
   }
 

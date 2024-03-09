@@ -14,17 +14,18 @@ export function App() {
   return (
     <>
       <GlobalStyles />
+      // ** routes
       <BrowserRouter>
-      <Routes>
-
-        <Route element={<AppLayout />}>
-        <Route index element={<Navigate replace to='/dashboard' />} />
-        <Route path='dashboard' element={<Dashboard />} />
-        <Route path='measurement' element={<Measurement />} />
-        <Route path='cad-overlay' element={<CadOverlay />} />
-        <Route path='*' element={<PageNotFound />} />
-        </Route>
-      </Routes>
+        <Routes>
+          // ** Child will have layout applied
+          <Route element={<AppLayout />}>
+            <Route index element={<Navigate replace to="/dashboard" />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="measurement" element={<Measurement />} />
+            <Route path="cad-overlay" element={<CadOverlay />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </>
   );
