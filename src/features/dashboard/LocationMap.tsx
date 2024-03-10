@@ -67,14 +67,15 @@ const LocationMap: FC<ILocationMapProps> = ({ coordinates }) => {
     });
 
     if (coordinates && coordinates.length > 0) {
-      coordinates.forEach(coordinate => {
+      const featureList = coordinates.map(coordinate => {
         const [lat, long] = coordinate;
         const point = new Point(fromLonLat([long, lat]));
-        const feature = new Feature(point);
-        vectorSource.addFeature(feature);
-        const extent = vectorSource.getExtent();
-        map.getView().fit(extent, { padding: [10, 30, 10, 40] });
+        return new Feature(point);
       });
+
+      vectorSource.addFeatures(featureList);
+      const extent = vectorSource.getExtent();
+      map.getView().fit(extent, { padding: [10, 30, 10, 40] });
     }
 
     return () => {
