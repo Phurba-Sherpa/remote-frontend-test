@@ -39,7 +39,7 @@ const { __DEFAULT_LAT__, __DEFAULT_LONG__, __DEFAULT_ZOOM__ } = CONFIG;
 const LocationMap: FC<ILocationMapProps> = ({ coordinates }) => {
   useEffect(() => {
     const vectorSource = new Vector();
-    const zoomLevel = !!coordinates ? 4 : __DEFAULT_ZOOM__;
+    const zoomLevel = coordinates ? 4 : __DEFAULT_ZOOM__;
 
     const map = new Map({
       target: 'map-container',

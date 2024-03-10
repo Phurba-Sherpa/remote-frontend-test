@@ -1,5 +1,4 @@
-import styled from "styled-components"
-
+import styled from 'styled-components';
 const StyledPage = styled.div`
   font-weight: 700;
   display: flex;
@@ -7,11 +6,7 @@ const StyledPage = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-`
+`;
 export default function MeasurementPage() {
-    return (
-      <StyledPage>
-        Measurement</StyledPage>
-    )
-  }
-  
+  return <StyledPage>Measurement</StyledPage>;
+}
