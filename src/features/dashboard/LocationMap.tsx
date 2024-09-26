@@ -79,7 +79,7 @@ const LocationMap: FC<ILocationMapProps> = ({ coordinates }) => {
     }
 
     return () => {
-      map.dispose();
+      map.setTarget(undefined)
     };
   }, [coordinates]);
 

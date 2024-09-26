@@ -23,7 +23,7 @@ const Dashboard = () => {
   if (status === 'error') {
     alert('No response from server');
   }
- 
+
   return (
     <StyledDashboard>
       <LocationList locations={data?.locations as Icoordinate[]} />
