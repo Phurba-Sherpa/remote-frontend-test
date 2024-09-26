@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
   return {
     plugins: [react()],
-    base: '/remote-frontend-test',
+    base: '/',
     server: {
       host: env.VITE_HOST,
       port: +env.VITE_PORT,
