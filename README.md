@@ -2,6 +2,9 @@
 
 ## Project Overview
 
+### Screenshot
+![screenshot](./ss.png)
+
 ## Technologies
 
 - React.js
